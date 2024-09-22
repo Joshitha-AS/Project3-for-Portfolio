@@ -1,0 +1,225 @@
+/* Basic Reset and Typography */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw; 
+    display: grid;
+    grid-template-rows: 12vh 60vh 45vh 50vh 25vh;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    height: 12vh;
+    width: 100vw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ff5733;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 3%;
+    color: white;
+    margin-left: 2%; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    align-content: center;
+    text-align: center;
+    padding-top: 10%;
+}
+
+nav ul li a {
+    /* Colors used - white*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    margin-left: 10px;
+}
+
+
+/**
+In CSS, ::before is a pseudo-element that is used to insert content before the content of an element.
+When you use hero::before, you're targeting a specific element with the class hero 
+and adding content before its actual content
+**/
+.hero::before {
+    content: "";
+    background: url('https://www.mcgroup.com/wp-content/uploads/2021/03/Banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+    opacity: 0.6; /* Adjust the opacity here */
+    position: absolute;
+    width:100vw;
+    height:50vh;
+}
+
+.hero h1, .hero p, .hero button,h3 {
+    position: relative;
+    z-index: 2; /* Ensures text appears above the background */
+    text-align: center;
+}
+
+.hero{
+    padding-top: 10px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.hero h3{
+    padding-bottom: 15px;
+}
+
+.hero button {
+    /* Colors used - ff5733*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+    background-color: #ff5733;
+    color: white;
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    font-size: 1em;
+    position: absolute;
+    left: 45%;
+
+}
+
+.hero button:hover {
+    /* Colors used - c70039*/
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tourist Places Section */
+.places {
+   margin: 0;
+}
+
+
+.places h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+}
+
+.place-card {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    
+}
+
+.place-card img {
+    border-radius: 10px;
+}
+
+.place-card h3 {
+    /* Colors used - ff5733*/
+    font-size: 24px;
+    /* padding: 10px; */
+    color: white;
+    background-color: #ff5733;
+    margin-bottom: 30px;
+}
+
+
+
+.place-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Culture Section */
+.culture {
+    /* Colors used - fefefe*/
+    margin-top: 1%;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.culture h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.culture p {
+    padding-bottom: 15px;
+}
+
+.culture-gallery {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.culture-gallery img {
+    transition: transform 0.3s ease;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.culture-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    /* Colors used - ff5733, white*/
+    margin-top: 5%;
+    padding: 40px;
+    text-align: center;
+    background-color: #ff5733;
+    color: aliceblue;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links a {
+    /* Colors used - white*/
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+
+footer p {
+    font-size: 14px;
+    color: white;
+}
